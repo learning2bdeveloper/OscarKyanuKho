@@ -1,4 +1,4 @@
-import "./../css/style.css";
+import "./style.css";
 
 const right = document.querySelector(".right-arrow");
 const left = document.querySelector(".left-arrow");
