@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+:root {
+  --bg-color: #0d1e28;
+  --cyan-600: #57fdf9;
+  --cyan-400: #5ef9e9;
+  --cyan-500: #49fdf9;
+  --cyan-900: #00fff6;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+section {
+  min-height: 100svh;
+}
+
+nav ul {
+  font-weight: bolder;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem 4rem;
+  font-size: 1.2rem;
+  gap: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  font-size: 1.5rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  inset: auto 3% 5% auto;
+  background-color: var(--cyan-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.section-introduction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.intro,
+ul,
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 3.3rem;
+  margin: auto;
+}
+
+.intro > h1 {
+  font-size: 4rem;
+}
+
+.intro > h2 {
+  font-size: 3rem;
+}
+
+.intro > h3 {
+  font-size: 2rem;
+}
+
+.tech-stack {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-block-start: 1rem;
+}
+
+.tech-stack i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--cyan-400);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #5ef9e9;
+  font-size: 1.5rem;
+  transition:
+    background-color 500ms linear,
+    color 500ms linear,
+    box-shadow 500ms linear;
+}
+
+.tech-stack i:hover {
+  background-color: var(--cyan-600);
+  color: var(--bg-color);
+  box-shadow: 0 0 1rem 0 var(--cyan-600);
+}
+
+.intro button {
+  margin: 2rem 0 0 0;
+  border: none;
+  outline: none;
+  background-color: var(--cyan-400);
+  box-shadow: 0 0 0.5rem 3px var(--cyan-400);
+  width: 10rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-family: "Fredoka";
+  border-radius: 1.5rem;
+  font-weight: 500;
+  transition:
+    box-shadow 500ms linear,
+    background-color 500ms linear;
+}
+
+.intro button:hover {
+  background-color: var(--cyan-600);
+  box-shadow: 0 0 1rem 0.3rem var(--cyan-600);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  height: 25rem;
+  width: 25rem;
+  border: 0.9rem solid #fffef9;
+  outline: 0.6rem solid var(--cyan-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #edecd8;
+  animation: shadowPulse 2000ms linear infinite alternate;
+}
+
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 1rem 0 var(--cyan-600);
+  }
+  25% {
+    box-shadow: 0 0 2rem 0 var(--cyan-600);
+  }
+  50% {
+    box-shadow: 0 0 3rem 0 var(--cyan-600);
+  }
+  75% {
+    box-shadow: 0 0 2rem 0 var(--cyan-600);
+  }
+  100% {
+    box-shadow: 0 0 1rem 0 var(--cyan-600);
+  }
+}
+
+.image-container img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.section-aboutme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "about education"
+    "about experience";
+}
+
+.section-aboutme .container1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: about;
+  margin-inline-start: 6rem;
+}
+
+.aboutme-containers h1 {
+  font-size: 6rem;
+}
+
+.aboutme-containers p {
+  font-size: 1.3rem;
+  color: #ddd7d7;
+}
+
+.me-part {
+  color: var(--cyan-600);
+}
+
+.aboutme-containers ul {
+  list-style: none;
+  line-height: 2.5rem;
+  margin-block-start: 1rem;
+  font-size: 1.2rem;
+}
+
+.aboutme-containers li {
+  display: flex;
+}
+
+.aboutme-containers li span:first-of-type {
+  color: white;
+  width: 130px;
+  font-weight: bolder;
+}
+
+.aboutme-containers span:last-of-type {
+  width: calc(130 - 100%);
+  color: var(--cyan-600);
+}
+
+.container2 {
+  grid-area: education;
+}
+
+.section-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-skills i {
+  font-size: 3rem;
+  color: var(--cyan-400);
+  opacity: 0.1;
+}
+
+.laptop-container {
+  position: relative;
+}
+
+.laptop {
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.inside-laptop {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -65%);
+  object-fit: contain;
+  width: 12rem;
+  height: 12rem;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+  transition:
+    opacity 500ms ease,
+    visibility 500ms ease; /* Smooth opacity and visibility transitions */
+}
+
+.inside-laptop[data-active] {
+  opacity: 1; /* Visible when active */
+  visibility: visible; /* Ensure the element is visible */
+  animation: glow 2000ms infinite; /* Continuous animation */
+}
+
+/* Keyframes for continuous glow animation */
+@keyframes glow {
+  0% {
+    transform: translate(-50%, -65%) scale(1);
+    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7)); /* Initial shadow */
+  }
+  50% {
+    transform: translate(-50%, -65%) scale(1.05); /* Scale up slightly */
+    filter: drop-shadow(
+      0 0 20px rgba(0, 200, 255, 1)
+    ); /* Brighten the shadow */
+  }
+  100% {
+    transform: translate(-50%, -65%) scale(1); /* Reset scale */
+    filter: drop-shadow(
+      0 0 10px rgba(0, 200, 255, 0.7)
+    ); /* Back to initial shadow */
+  }
+}
