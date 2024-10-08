@@ -333,3 +333,7 @@ h3 {
     ); /* Back to initial shadow */
   }
 }
+
+.section-projects .container {
+  border: 1px solid blue;
+}
