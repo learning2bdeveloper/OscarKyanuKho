@@ -24,7 +24,7 @@ img {
   -ms-user-select: none;
 }
 
-nav li a {
+a {
   text-decoration: none;
   color: white;
 }
